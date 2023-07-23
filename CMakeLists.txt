@@ -1,0 +1,6 @@
+﻿cmake_minimum_required (VERSION 3.8)
+project ("2023-07-23_TASK11_HW03_dyn_lib_cmake")
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library (LeaverDynamicLibrary SHARED Leaver.h Leaver.cpp)
+add_executable (LeaverExe main.cpp)
+target_link_libraries(LeaverExe LeaverDynamicLibrary)
